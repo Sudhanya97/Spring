@@ -14,10 +14,10 @@ public class SpringMain {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("greetings.xml");
 
 		Greeting  festivalGreeting = ctx.getBean("festival", Greeting.class);
-		System.out.println(festivalGreeting.greet());
+	//	System.out.println(festivalGreeting.greet());
 		
-		Greeting  anniversaryGreeting = ctx.getBean("anniversary", Greeting.class);
-		System.out.println(anniversaryGreeting.greet());
+		Greeting  anniversaryGreeting = ctx.getBean("festival", Greeting.class);
+	//	System.out.println(anniversaryGreeting.greet());
 		
 	}
 	
