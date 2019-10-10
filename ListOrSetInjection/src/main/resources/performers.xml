@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+	<bean id="Guitar" class="com.zensar.spring.instruments.Guitar"></bean>
+	<bean id="Violin" class="com.zensar.spring.instruments.Violin"></bean>
+	<bean id="Piano" class="com.zensar.spring.instruments.Piano"></bean>
+	<bean id="Sudhanya" class="com.zensar.spring.performers.Instrumentalist">
+		<property name="intruments" >
+			<list>
+				<ref bean="Violin"/>
+				<ref bean="Guitar"/>
+				<ref bean="Piano"/>
+				<ref bean="Piano"/>
+			</list>
+		</property>
+		<property name="song" value="Jani Dekha hobe"></property>
+	</bean>
+	
+</beans>
