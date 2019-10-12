@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+		<bean id="magicbox" class="com.zensar.spring.magicboxes.MagicboxImpl">
+			<replaced-method name="getContents"  replacer="magicBoxReplacer"></replaced-method>		
+		</bean>
+		<bean id="PC Sirkar" class="com.zensar.spring.performers.Magician">
+			<property name="magicWords" value="Abracadabra"></property>
+			<property name="magicbox" ref="magicbox"></property>
+		</bean>
+		
+		<bean id="magicBoxReplacer" class="com.zensar.spring.replacers.MagicboxReplacer"></bean>
+		
+</beans>
