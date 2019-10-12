@@ -18,7 +18,7 @@ public class Instrumentalist implements Performer {
 	@Override
 	public void perform() {
 		System.out.println("Instrumentalist is playing a song "+song);
-		instrument.play();;
+		instrument.play();
 	}
 
 }
